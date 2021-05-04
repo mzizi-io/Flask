@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<!--List of projects-->
+<div class="content-wrapper">
+    <div class="portfolio-items-wrapper">
+
+
+        <div class="portfolio-item-wrapper">
+            <div class="portfolio-img-background" style = "background-image: url(/static/img/portfolio4-heston.jpg)"></div>
+            <div class="img-text-wrapper">
+                <div class="logo-wrapper">
+                    <a href = "{{ url_for('heston') }}" class="bootstrap-link">
+                        <img src = "static/img/logo-transparent.png" height = 100 width= 100>
+                    </a>
+                </div>
+                <div class="subtitle">
+                    <h2><a href = "{{ url_for('heston') }}" class="bootstrap-link" style = "text-decoration: none;">
+                        Heston Options Pricing Model in Python
+                    </a></h2>
+                    <a href = "https://github.com/CalebMigosi/code-more/tree/main/EquityOptionsPricing">
+                        <img src = "static/img/github.png" width = 50 height = 50>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="portfolio-item-wrapper">
+            <div class="portfolio-img-background" style = "background-image: url(/static/img/portfolio1-options_cpp.jpg)"></div>
+            <div class="img-text-wrapper">
+                <div class="logo-wrapper">
+                    <img src = "static/img/logo-transparent.png" height = 100 width= 100>
+                </div>
+                <div class="subtitle">
+                    <h2>C++ Pricing Library</h2>
+                    <a href = "https://github.com/CalebMigosi/CPP-Simple-Equity-ESG">
+                        <img src = "static/img/github.png" width = 50 height = 50>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="portfolio-item-wrapper">
+            <div class="portfolio-img-background" style = "background-image: url(/static/img/portfolio2-neural_networks.jpg)"></div>
+            <div class="img-text-wrapper">
+                <div class="logo-wrapper">
+                    <img src = "static/img/logo-transparent.png" height = 100 width= 100>
+                </div>
+                <div class="subtitle">
+                    <h2>Neural Networks for options calibration</h2>
+                    <a href = "https://github.com/CalebMigosi/code-more/tree/main/EquityOptionsPricing">
+                        <img src = "static/img/github.png" width = 50 height = 50>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="portfolio-item-wrapper">
+            <div class="portfolio-img-background" style = "background-image: url(/static/img/portfolio3-recom_system.jpg)"></div>
+            <div class="img-text-wrapper">
+                <div class="logo-wrapper">
+                    <img src = "static/img/logo-transparent.png" height = 100 width= 100>
+                </div>
+                <div class="subtitle">
+                    <h2>NLP - Recommendation system using BERT</h2>
+                    <a href = "https://github.com/CalebMigosi/code-more">
+                        <img src = "static/img/github.png" width = 50 height = 50>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="portfolio-item-wrapper">
+            <div class="portfolio-img-background" style = "background-image: url(/static/img/portfolio5-spam_detection.jpg)"></div>
+            <div class="img-text-wrapper">
+                <div class="logo-wrapper">
+                    <img src = "static/img/logo-transparent.png" height = 100 width= 100>
+                </div>
+                <div class="subtitle">
+                    <h2>NLP - Spam Identification in Python</h2>
+                    <a href = "https://github.com/CalebMigosi/code-more/tree/main/Spam%20Detection">
+                        <img src = "static/img/github.png" width = 50 height = 50>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="portfolio-item-wrapper">
+            <div class="portfolio-img-background" style = "background-image: url(/static/img/portfolio6-webscrapping.jpg)"></div>
+            <div class="img-text-wrapper">
+                <div class="logo-wrapper">
+                    <img src = "static/img/logo-transparent.png" height = 100 width= 100>
+                </div>
+                <div class="subtitle">
+                    <h2>Webscrapping in Python</h2>
+                    <a href = "https://github.com/CalebMigosi/code-more/tree/main/WebScrapping">
+                        <img src = "static/img/github.png" width = 50 height = 50>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="portfolio-item-wrapper">
+            <div class="portfolio-img-background" style = "background-image: url(/static/img/portfolio7-robonaut.jpg)"></div>
+            <div class="img-text-wrapper">
+                <div class="logo-wrapper">
+                    <img src = "static/img/logo-transparent.png" height = 100 width= 100>
+                </div>
+                <div class="subtitle">
+                    <h2>
+                        <a href = "https://calebmigosi.medium.com/">Medium Articles</a>
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- JS Script-->
+<script src = "static/js/myfile.js"></script>
+{% endblock %}

@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="sidenav">
+</br>
+    <form method="POST" action="{{url_for('heston')}}">
+        <!--The What is your name tag-->
+        {{ form.hidden_tag() }}
+        
+        <div class="input-container" class = "form-group mx-sm-1 mb-2"> 
+            <!--SIGMA-->
+            {{ form.sigma.label() }}
+            <div>
+                {{ form.sigma(class="form-control") }}
+            </div>
+            
+             </br>
+
+            <!--KAPPA-->
+            {{ form.sigma.label() }}
+            <div>
+                {{ form.kappa(class="form-control") }}
+            </div>
+            
+             </br>
+
+            <!--THETA-->
+            {{ form.theta.label() }}
+            <div>
+                {{ form.theta(class="form-control") }}
+            </div>
+            
+             </br>
+
+            <!--VOLVOL-->
+            {{ form.volvol.label() }}
+            <div>
+                {{ form.volvol(class="form-control") }}
+            </div>
+            
+             </br>
+
+            <!--RHO-->
+            {{ form.rho.label() }}
+            <div>
+                {{ form.rho(class="form-control") }}
+            </div>
+            
+             </br>
+
+            <!--Submit button-->
+            {{form.submit(class="btn btn-warning")}}
+        </div>
+    </form>
+</div>
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+
+<div class="plot-container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="chart" id="plot">
+                <div class="chart" id="plot">
+                    <script>
+                        var graphs = {{ plot | safe }};
+                        Plotly.plot('plot',graphs,{});
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

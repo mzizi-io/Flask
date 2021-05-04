@@ -1,0 +1,266 @@
+html, body {
+    height: 100%;
+    width: 100%
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    color: orange;
+    background-color: #292b2c;
+}
+
+/*
+                HOME PAGE
+**********************************************
+*/
+
+/* Set the background in home page to full screen*/
+/*===============================================================*/
+img.homeBackground {
+    /* Set rules to fill background */
+    min-height: 100%;
+    min-width: 1024px;
+
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.center {
+    width: 100%;
+  }
+
+/*Help with background image*/
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+    img.homeBackground {
+      left: 50%;
+      margin-left: -512px;   /* 50% */
+    }
+  }
+
+
+/* NAVIGATION BAR
+===============================================================*/
+.navbar{
+    opacity: 0.2;
+    transition: 1s;
+    text-transform: uppercase;
+}
+
+.navbar:hover{
+    opacity: 1.0;
+}
+
+#link{
+    transition: 0.5s;
+    color: orange; 
+    font-size: 20px;
+}
+
+#link:hover{
+    color: black;
+    font-weight: bold; 
+    border-bottom: 2px solid orange;   
+}
+
+
+/* JUMBOTRON
+===============================================================*/
+.jumbotron{
+    opacity: 0;
+    background-color: transparent;
+    height: 270px;
+    width: 40%;
+    padding-top: 5px; 
+    padding-bottom: 0px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 50px 50px 50px 50px; 
+    position: fixed;
+    top: 35%;
+    left: 32%;
+    transition: 5s;
+    animation: start-screen;
+    animation-duration: 10s;
+}
+
+.jumbotron:hover {
+    opacity: 1;
+}
+
+.display-5, .lead{
+    color: orange;
+    opacity: 1.0;
+}
+
+/* SET JUMBOTRON WITHIN HOME IMAGE
+===============================================================*/
+#container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+#homeBGDiv,
+#jumbotron {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+/* Animations*/
+@keyframes start-screen{
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+
+
+
+/*
+                PROJECTS PAGE
+**********************************************
+*/
+
+/*Three columns for each row*/
+.portfolio-items-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/*We will need position aboslute below*/
+.portfolio-item-wrapper {
+    position: relative;
+}
+
+/*spread the image over each fractional section of the screen*/
+.portfolio-img-background{
+    height: 350px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Set the image and text on top of the background div image*/
+.img-text-wrapper{
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    /*left to right*/
+    justify-content: center;
+    /*top to bottom*/
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+
+}
+
+/*start state*/
+.subtitle{
+    font-weight: bold;
+    transition: 1s;
+    color: transparent;
+    visibility: hidden;  
+}
+
+/*start state*/
+.img-text-wrapper:hover .subtitle{
+    font-weight: bold;
+    color: orange; 
+    visibility: visible;  
+}
+
+/*Will darken the screen when we hover. To be used in JS*/
+.img-darken{
+    transition: 1s;
+    filter: brightness(10%);
+    visibility: visible;  
+}
+
+
+/*
+                HESTON PAGE
+**********************************************
+*/
+.subtitle >h2 > a{
+    text-decoration: none;
+    color: orange;
+}
+
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 200px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 20; /* Stay at the top */
+    left: 0;
+    background-color: black; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 0px;
+  }
+
+/* Container with */
+.input-container{
+    display: flex;
+    flex-direction: column;
+    padding: 5px 30px 5px 30px;
+    justify-content: center; 
+}
+
+.plot-container{
+    display: flex;
+    justify-content: center;
+    padding: 500x;
+}
+
+.button-text-container{
+    display: flex;
+    justify-content: center;
+}
+
+.submit-button{
+    display: flex;
+    justify-content: center;
+}
+
+/*
+                CONTACT PAGE
+**********************************************
+*/
+.contact-wrapper{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.img-contact-wrapper{
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+}
+
+.contact-text-wrapper{
+    width: 100%;
+    padding: 30px;
+}
+
+.contact-form-wrapper{
+    padding: 0px; 
+}
+
+form textarea#email {
+    width: 500px;
+    height: 100px;
+    max-width: 500px;
+}

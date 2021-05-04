@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<!-- FORM SUBMISSION-->
+<div class="contact-wrapper">
+
+    <!-- Image for contact page-->
+    <div class="img-contact-wrapper">
+        <img src = "static/img/contact.jpeg" width = 1200 height = 800 >
+    </div>
+
+    <!-- Text and form for contact page-->
+    <div class="contact-text-wrapper">
+        <div class="text-header-wrapper">
+            <h3>Feel free to reach out!</h3>
+            <p>We'd really love to hear from you. </p>
+            <p>Leave any comments or requests and we will be sure to get back to you.</p>
+        </div>
+       
+        <div class="contact-form-wrapper">
+            <form method = "POST">
+
+                <!--The What is your name tag-->
+                {{ form.hidden_tag() }}
+                
+                <div class = "form-group mx-sm-1 mb-2"> 
+                    <!--Email label-->
+                    {{ form.email.label() }}
+
+                    <div>
+                        {{ form.email(class="form-email", placeholder="Email") }}
+                    </div>
+                    
+                     </br>
+
+                    <!--Message label-->
+                    {{ form.message.label() }}
+
+                    <div>
+                        {{ form.message(class="form-message", 
+                                        placeholder="Message") }}
+                    </div>
+
+                    <br>
+                    <!--Submit button-->
+                    {{form.submit(class="btn btn-warning")}}
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- MESSAGE HANDLING-->
+{% for message in get_flashed_messages()%}
+    <div class="alert alert-primary alert-dismissible fade show" role="alert">
+        <strong> {{message}} </strong> 
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+   
+{% endfor %}
+
+{% endblock %}
