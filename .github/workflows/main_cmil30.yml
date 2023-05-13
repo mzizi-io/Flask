@@ -28,11 +28,11 @@ jobs:
           source venv/bin/activate
       
       - name: Install dependencies
-        run: make install
+        run: pip install -r requirements.txt
       
       - name: Run app
         run: |
-          make run
+          flask run
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
       
       - name: Upload artifact for deployment jobs
