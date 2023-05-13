@@ -24,10 +24,11 @@ jobs:
 
       - name: Create and start virtual environment
         run: |
-          python -m pipenv    
+          python -m venv venv
+          source venv/bin/activate
       
       - name: Install dependencies
-        run: pipenv install
+        run: pip install -r requirements.txt
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
       
@@ -36,7 +37,8 @@ jobs:
         with:
           name: python-app
           path: |
-            .
+            . 
+            !venv/
 
   deploy:
     runs-on: ubuntu-latest
@@ -58,4 +60,4 @@ jobs:
         with:
           app-name: 'cmil30'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_140127DDBABA4D29843D6AA45A6AC9A3 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_6713D71627534D4AB792A56CB89DC60E }}
