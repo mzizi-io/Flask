@@ -1,9 +1,9 @@
-from flask import Flask, render_template, url_for, request, flash, redirect, jsonify
-from flask_restful import Resource, Api, abort, reqparse
+from flask import Flask, render_template, request, flash
+import flask.scaffold
+flask.helpers._endpoint_from_view_func = flask.scaffold._endpoint_from_view_func
 from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, TextAreaField, FloatField
-from wtforms.fields.html5 import EmailField
+from wtforms import SubmitField, TextAreaField, FloatField, EmailField
 from wtforms import validators
 from wtforms.validators import DataRequired, NumberRange
 from datetime import datetime
